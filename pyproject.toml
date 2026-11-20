@@ -1,0 +1,17 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="retrievalrankaudit"
+version="1.0.0"
+description="Evaluate ranked retrieval fixtures with hit rate, mean reciprocal rank, recall at K, and per-query regression summaries."
+readme="README.md"
+requires-python=">=3.9"
+license={text="MIT"}
+
+[project.scripts]
+retrieval-rank-audit="retrieval_rank_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where=["src"]
